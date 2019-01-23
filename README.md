@@ -11,10 +11,9 @@ This plugin allows you to controll any browser viewing your lovelace frontend fr
 
 # Installation instructions
 
-1. Download and setup [card-tools](https://github.com/thomasloven/lovelace-card-tools).
+This plugin requires [card-tools](https://github.com/thomasloven/lovelace-card-tools) to be installed.
 
-2. In the same way, download and install [browser-commander.js](https://github.com/thomasloven/lovelace-browser-commander/raw/master/browser-commander.js).
-
+For installation instructions [see this guide](https://github.com/thomasloven/hass-config/wiki/Lovelace-Plugins).
 
 # Usage
 
