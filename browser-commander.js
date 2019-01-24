@@ -77,6 +77,9 @@ window.LovelaceBrowserCommander = window.LovelaceBrowserCommander || (function()
         if(data.large)
           document.querySelector("home-assistant").__moreInfoEl.large = true;
         break;
+      case "lovelace-reload":
+        cardTools.fireEvent("config-refresh");
+        break;
     };
   });
 

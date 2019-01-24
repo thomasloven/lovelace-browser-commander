@@ -76,3 +76,6 @@ event_data:
       - light.outdoors
 ```
 
+## `lovelace-reload`
+Refreshes the lovelace config. Same as clicking "Refresh" in the top right menu.
+
