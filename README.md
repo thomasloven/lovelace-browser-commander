@@ -76,6 +76,10 @@ event_data:
       - light.outdoors
 ```
 
+## `close-popup`
+
+Close the popup dialog opened by `popup`, `more-info` or `debug`.
+
 ## `lovelace-reload`
 Refreshes the lovelace config. Same as clicking "Refresh" in the top right menu.
 

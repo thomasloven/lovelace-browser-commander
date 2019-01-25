@@ -80,6 +80,11 @@ window.LovelaceBrowserCommander = window.LovelaceBrowserCommander || (function()
       case "lovelace-reload":
         cardTools.fireEvent("config-refresh");
         break;
+      case "close-popup":
+        let moreInfo = document.querySelector("home-assistant").__moreInfoEl;
+        if (moreInfo) moreInfo.close()
+        break;
+
     };
   });
 
