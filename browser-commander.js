@@ -65,6 +65,9 @@ window.LovelaceBrowserCommander = window.LovelaceBrowserCommander || (function()
         let card = cardTools.createCard(data.card);
         card.hass = cardTools.hass();
         makepopup(data.title, card);
+        document.querySelector("home-assistant").__moreInfoEl.large = false;
+        if(data.large)
+          document.querySelector("home-assistant").__moreInfoEl.large = true;
         break;
       case "navigate":
         if(!data.navigation_path) return;
@@ -74,6 +77,7 @@ window.LovelaceBrowserCommander = window.LovelaceBrowserCommander || (function()
       case "more-info":
         if(!data.entity_id) return;
         cardTools.moreInfo(data.entity_id);
+        document.querySelector("home-assistant").__moreInfoEl.large = false;
         if(data.large)
           document.querySelector("home-assistant").__moreInfoEl.large = true;
         break;
