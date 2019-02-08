@@ -24,7 +24,7 @@ window.LovelaceBrowserCommander = window.LovelaceBrowserCommander || (function()
     `;
     popup.appendChild(message);
     cardTools.moreInfo(Object.keys(cardTools.hass().states)[0]);
-    let moreInfo = document.querySelector("home-assistant").__moreInfoEl;
+    let moreInfo = document.querySelector("home-assistant")._moreInfoEl;
     moreInfo._page = "none";
     moreInfo.shadowRoot.appendChild(popup);
 
@@ -65,9 +65,9 @@ window.LovelaceBrowserCommander = window.LovelaceBrowserCommander || (function()
         let card = cardTools.createCard(data.card);
         card.hass = cardTools.hass();
         makepopup(data.title, card);
-        document.querySelector("home-assistant").__moreInfoEl.large = false;
+        document.querySelector("home-assistant")._moreInfoEl.large = false;
         if(data.large)
-          document.querySelector("home-assistant").__moreInfoEl.large = true;
+          document.querySelector("home-assistant")._moreInfoEl.large = true;
         break;
       case "navigate":
         if(!data.navigation_path) return;
@@ -77,15 +77,15 @@ window.LovelaceBrowserCommander = window.LovelaceBrowserCommander || (function()
       case "more-info":
         if(!data.entity_id) return;
         cardTools.moreInfo(data.entity_id);
-        document.querySelector("home-assistant").__moreInfoEl.large = false;
+        document.querySelector("home-assistant")._moreInfoEl.large = false;
         if(data.large)
-          document.querySelector("home-assistant").__moreInfoEl.large = true;
+          document.querySelector("home-assistant")._moreInfoEl.large = true;
         break;
       case "lovelace-reload":
         cardTools.fireEvent("config-refresh");
         break;
       case "close-popup":
-        let moreInfo = document.querySelector("home-assistant").__moreInfoEl;
+        let moreInfo = document.querySelector("home-assistant")._moreInfoEl;
         if (moreInfo) moreInfo.close()
         break;
 
