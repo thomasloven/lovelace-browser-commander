@@ -23,7 +23,7 @@ window.LovelaceBrowserCommander = window.LovelaceBrowserCommander || (function()
     </app-toolbar>
     `;
     popup.appendChild(message);
-    cardTools.moreInfo(Object.keys(cardTools.hass().states)[0]);
+    cardTools.moreInfo(Object.keys(cardTools.hass.states)[0]);
     let moreInfo = document.querySelector("home-assistant")._moreInfoEl;
     moreInfo._page = "none";
     moreInfo.shadowRoot.appendChild(popup);
@@ -34,20 +34,20 @@ window.LovelaceBrowserCommander = window.LovelaceBrowserCommander || (function()
           popup.parentNode.removeChild(popup);
           clearInterval(interval);
         } else {
-          message.hass = cardTools.hass();
+          message.hass = cardTools.hass;
         }
       }, 100)
     }, 1000);
   }
 
-  cardTools.hass().connection.subscribeEvents((event) => {
+  cardTools.hass.connection.subscribeEvents((event) => {
     if(event.event_type != event_name) return;
     const data = event.data;
     if(data.id) {
       if(Array.isArray(data.id)) {
-        if(!data.id.includes(cardTools.deviceID())) return;
+        if(!data.id.includes(cardTools.deviceID)) return;
       } else{
-        if(data.id != cardTools.deviceID()) return;
+        if(data.id != cardTools.deviceID) return;
       }
     }
     if(!data.command) return;
@@ -55,7 +55,7 @@ window.LovelaceBrowserCommander = window.LovelaceBrowserCommander || (function()
     switch(data.command) {
       case "debug":
         let message = document.createElement('ha-card');
-        message.innerHTML = `${cardTools.deviceID()}`;
+        message.innerHTML = `${cardTools.deviceID}`;
         message.style.padding = '10px';
         makepopup('Device id', message);
         break;
@@ -63,7 +63,7 @@ window.LovelaceBrowserCommander = window.LovelaceBrowserCommander || (function()
         if(!data.title) return;
         if(!data.card) return;
         let card = cardTools.createCard(data.card);
-        card.hass = cardTools.hass();
+        card.hass = cardTools.hass;
         makepopup(data.title, card);
         document.querySelector("home-assistant")._moreInfoEl.large = false;
         if(data.large)
