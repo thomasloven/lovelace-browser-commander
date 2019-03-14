@@ -62,6 +62,7 @@ Note that if you're using [popup-card](https://github.com/thomasloven/lovelace-p
 - `title`
 - `card`
 - `large` (optional)
+- `style` (optional)
 
 Will open a dialog with the heading `title` and contents provided by `card`.
 E.g
