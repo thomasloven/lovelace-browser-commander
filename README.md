@@ -9,6 +9,9 @@ This plugin allows you to controll any browser viewing your lovelace frontend fr
 - Have a message pop up on every screen in the house when it's bedtime.
 - Make the browser on your workstation switch to a specific tab when the kitchen light is on after midnight
 
+## Important note!
+From Home Assistant version 0.90, Browser commander will only work if the user that's logged in to the interface you want to controll is in the admin group.
+
 # Installation instructions
 
 This plugin requires [card-tools](https://github.com/thomasloven/lovelace-card-tools) to be installed.
