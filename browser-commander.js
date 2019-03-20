@@ -66,6 +66,10 @@ window.LovelaceBrowserCommander = window.LovelaceBrowserCommander || (function()
       case "close-popup":
         cardTools.closePopUp()
         break;
+      case "set-theme":
+        if(!data.theme) return;
+        cardTools.fireEvent("settheme", data.theme);
+        break;
 
     };
   });

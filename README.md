@@ -88,5 +88,11 @@ Close the popup dialog opened by `popup`, `more-info` or `debug`.
 ## `lovelace-reload`
 Refreshes the lovelace config. Same as clicking "Refresh" in the top right menu.
 
+## `set-theme`
+
+- `theme`
+
+Sets the current theme.
+
 ---
 <a href="https://www.buymeacoffee.com/uqD6KHCdJ" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/white_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
