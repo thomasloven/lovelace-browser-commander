@@ -1,6 +1,8 @@
 browser-commander
 =================
 
+# This is deprecated - Use [browser_mod](https://github.com/thomasloven/hass-browser_mod) instead
+
 This plugin allows you to controll any browser viewing your lovelace frontend from Home Assistant.
 
 # Example uses
